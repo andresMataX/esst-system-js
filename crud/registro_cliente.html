@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/registro.css">
+</head>
+
+<body>
+    <div class="cont">
+        <div class="div-menu">
+            <div id="logo">
+                <a href="#"><img src="/img/001-salon.png" alt=""></a>
+            </div>
+            <div id="registro" class="activo">
+                <a href="/crud/registro_cliente.html"><img src="/img/010-registro-en-linea.png" alt=""></a>
+            </div>
+            <div id="listar">
+                <a href="/crud/listado_clientes.html"><img src="/img/009-dashboard.png" alt=""></a>
+            </div>
+            <div id="contabilidad">
+                <a href="/crud/registro_coste.html"><img src="/img/003-contabilidad.png" alt=""></a>
+            </div>
+            <div id="salir">
+                <a href="/index.html"><img src="/img/004-cerrar-sesion.png" alt=""></a>
+            </div>
+        </div>
+        <div class="div-panel">
+            <h1>Registrar cliente</h1>
+            <form>
+                <div class="col">
+                    <div class="fila">
+                        <h2>Nombre del cliente</h2>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+                    <div class="fila">
+                        <h2>Apellido del cliente</h2>
+                        <input type="text" name="apellido" id="apellido">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="fila">
+                        <h2>Tipo de corte</h2>
+                        <input list="cortes" name="tipo_corte" id="corte" />
+                        <datalist id="cortes">
+                            <option value="Chrome">
+                            <option value="Firefox">
+                            <option value="Internet Explorer">
+                            <option value="Opera">
+                            <option value="Safari">
+                            <option value="Microsoft Edge">
+                        </datalist>
+                    </div>
+                    <div class="fila">
+                        <div class="cont-img">
+                            <img src="/img/007-tijeras.png" alt="tijeras">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col-botones">
+                    <input type="submit" value="CANCELAR">
+                    <input type="submit" value="ACEPTAR">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

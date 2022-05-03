@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado Clientes</title>
+    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="/css/clientes.css">
+
+</head>
+
+<body>
+    <div class="cont">
+        <div class="div-menu">
+            <div id="logo">
+                <a href="#"><img src="/img/001-salon.png" alt=""></a>
+            </div>
+            <div id="registro">
+                <a href="/crud/registro_cliente.html"><img src="/img/010-registro-en-linea.png" alt=""></a>
+            </div>
+            <div id="listar" class="activo">
+                <a href="/crud/listado_clientes.html"><img src="/img/009-dashboard.png" alt=""></a>
+            </div>
+            <div id="contabilidad">
+                <a href="/crud/registro_coste.html"><img src="/img/003-contabilidad.png" alt=""></a>
+            </div>
+            <div id="salir">
+                <a href="/index.html"><img src="/img/004-cerrar-sesion.png" alt=""></a>
+            </div>
+        </div>
+        <div class="div-panel">
+            <div class="cabecera-listado">
+                <div class="filtrador">
+                    <div class="opciones">
+                        <div>
+                            <h2>Día</h2>
+                        </div>
+                        <div>
+                            <h2>Mes</h2>
+                        </div>
+                        <div>
+                            <h2>Año</h2>
+                        </div>
+                    </div>
+                    <div class="filtro">
+                        <form>
+                            <input list="temporalidad" name="temporalidad" id="temp" />
+                            <datalist id="temporalidad">
+                                <option value="Chrome">
+                                <option value="Firefox">
+                                <option value="Internet Explorer">
+                                <option value="Opera">
+                                <option value="Safari">
+                                <option value="Microsoft Edge">
+                            </datalist>
+                            <input type="submit" value="Buscar">
+                        </form>
+                    </div>
+                </div>
+                <div class="titulo">
+                    <h1>Listado de clientes</h1>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">Larry the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

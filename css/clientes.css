@@ -1,0 +1,63 @@
+.div-menu {
+    width: 80px;
+    height: 657px;
+}
+
+.cabecera-listado {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-panel {
+    padding: 30px;
+}
+
+.opciones {
+    display: flex;
+}
+
+.opciones div {
+    border: 3px solid black;
+    display: block;
+    width: 110px;
+    text-align: center;
+}
+
+.opciones h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.filtro {
+    margin-top: 15px;
+}
+
+.filtro form {
+    display: flex;
+    justify-content: end;
+}
+
+#temp {
+    border: 2px solid black;
+    display: block;
+    font-size: 20px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 5px;
+    width: 150px;
+}
+
+input[type="submit"] {
+    background-color: white;
+    border: 3px solid black;
+    cursor: pointer;
+    display: block;
+    font-family: 'Poppins';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.titulo {
+    margin-right: 100px;
+}
