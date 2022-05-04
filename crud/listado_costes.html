@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listado Costes</title>
+    <title>Costes - Listado</title>
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/listado.css">
 
@@ -35,26 +35,20 @@
                 <div class="filtrador">
                     <div class="opciones">
                         <div>
-                            <h2>Día</h2>
+                            <a href="/crud/balance.html">
+                                <h2>Balance</h2>
+                            </a>
                         </div>
                         <div>
-                            <h2>Mes</h2>
-                        </div>
-                        <div>
-                            <h2>Año</h2>
+                            <a href="/crud/listado_costes.html">
+                                <h2>Costes</h2>
+                            </a>
                         </div>
                     </div>
                     <div class="filtro">
+                        <p><em>Filtrar por producto</em></p>
                         <form>
-                            <input list="temporalidad" name="temporalidad" id="temp" />
-                            <datalist id="temporalidad">
-                                <option value="Chrome">
-                                <option value="Firefox">
-                                <option value="Internet Explorer">
-                                <option value="Opera">
-                                <option value="Safari">
-                                <option value="Microsoft Edge">
-                            </datalist>
+                            <input type="text" name="producto" id="producto">
                             <input type="submit" value="Buscar">
                         </form>
                     </div>
