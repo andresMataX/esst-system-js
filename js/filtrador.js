@@ -1,6 +1,9 @@
 // Referenicas HTML
-const opciones = document.querySelectorAll('.opcion');
-
-console.log(opciones.forEach(console.log));
+const divOpciones = document.querySelector('.opciones');
+const temporalidad = document.querySelector('#temporalidad');
 
 // Evento
+divOpciones.addEventListener('click', (e) => {
+    console.log(e.target.outerText);
+    console.log(temporalidad);
+});
