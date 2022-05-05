@@ -35,12 +35,15 @@ agregaDias();
 divOpciones.addEventListener('click', (e) => {
     switch (e.target.outerText) {
         case 'Día':
+            temp.name = 'temporalidad_dia'
             agregaDias();
             break;
         case 'Mes':
+            temp.name = 'temporalidad_mes'
             agregaMeses();
             break;
         case 'Año':
+            temp.name = 'temporalidad_anio'
             reinicarDatalist();
             opcionNueva = `
             <option class="op" value="2022">
