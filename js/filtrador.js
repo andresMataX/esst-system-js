@@ -1,12 +1,12 @@
 // Referenicas HTML
 const divOpciones = document.querySelector('.opciones');
-const temporalidad = document.querySelector('#temporalidad');
-const temp = document.querySelector('#temp');
+const fecha = document.querySelector('#fecha');
+const filtroFecha = document.querySelector('#filtro_fecha');
 
 const reinicarDatalist = () => {
     opcionNueva = '';
-    temporalidad.innerHTML = '';
-    temp.value = '';
+    fecha.innerHTML = '';
+    filtroFecha.value = '';
 }
 
 const agregaDias = () => {
@@ -16,7 +16,7 @@ const agregaDias = () => {
                 <option class="op" value="${i}">
                 `
     }
-    temporalidad.innerHTML += opcionNueva;
+    fecha.innerHTML += opcionNueva;
 }
 
 const agregaMeses = () => {
@@ -26,7 +26,7 @@ const agregaMeses = () => {
                 <option class="op" value="${i}">
                 `
     }
-    temporalidad.innerHTML += opcionNueva;
+    fecha.innerHTML += opcionNueva;
 }
 
 agregaDias();
@@ -34,21 +34,24 @@ agregaDias();
 // Evento
 divOpciones.addEventListener('click', (e) => {
     switch (e.target.outerText) {
+        case 'Fecha':
+
+            break;
         case 'Día':
-            temp.name = 'temporalidad_dia'
+            filtroFecha.name = 'temporalidad_dia'
             agregaDias();
             break;
         case 'Mes':
-            temp.name = 'temporalidad_mes'
+            filtroFecha.name = 'temporalidad_mes'
             agregaMeses();
             break;
         case 'Año':
-            temp.name = 'temporalidad_anio'
+            filtroFecha.name = 'temporalidad_anio'
             reinicarDatalist();
             opcionNueva = `
             <option class="op" value="2022">
             `
-            temporalidad.innerHTML = opcionNueva;
+            fecha.innerHTML = opcionNueva;
             break;
     }
 });

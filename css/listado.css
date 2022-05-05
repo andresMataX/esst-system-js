@@ -61,7 +61,7 @@ a {
     justify-content: end;
 }
 
-#temp,
+#filtro_fecha,
 input[type="text"] {
     border: 2px solid black;
     display: block;
