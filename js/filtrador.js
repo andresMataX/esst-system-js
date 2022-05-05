@@ -29,24 +29,34 @@ const agregaMeses = () => {
     fecha.innerHTML += opcionNueva;
 }
 
-agregaDias();
+const convertirInputText = () => {
+    reinicarDatalist();
+    filtroFecha.name = 'fecha'
+    filtroFecha.type = 'text';
+}
+
+// convertirInputText();
 
 // Evento
 divOpciones.addEventListener('click', (e) => {
     switch (e.target.outerText) {
         case 'Fecha':
-
+            console.log(fecha);
+            convertirInputText();
             break;
         case 'Día':
-            filtroFecha.name = 'temporalidad_dia'
+            filtroFecha.name = 'fecha_d'
+            filtroFecha.type = '';
             agregaDias();
             break;
         case 'Mes':
-            filtroFecha.name = 'temporalidad_mes'
+            filtroFecha.name = 'fecha_m'
+            filtroFecha.type = '';
             agregaMeses();
             break;
         case 'Año':
-            filtroFecha.name = 'temporalidad_anio'
+            filtroFecha.name = 'fecha_a'
+            filtroFecha.type = '';
             reinicarDatalist();
             opcionNueva = `
             <option class="op" value="2022">
