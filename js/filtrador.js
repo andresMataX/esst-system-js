@@ -2,26 +2,28 @@
 const divOpciones = document.querySelector('.opciones');
 const temporalidad = document.querySelector('#temporalidad');
 
-let opcionNueva;
-for (let i = 1; i < 32; i++) {
-    opcionNueva += `
-    <option class="op" value="${i}">
-    `
+const reinicarDatalist = () => {
+    opcionNueva = '';
+    temporalidad.innerHTML = '';
 }
-temporalidad.innerHTML += opcionNueva;
+
+const agregaDias = () => {
+    reinicarDatalist();
+    for (let i = 1; i < 32; i++) {
+        opcionNueva += `
+                <option class="op" value="${i}">
+                `
+    }
+    temporalidad.innerHTML += opcionNueva;
+}
+
+agregaDias();
 
 // Evento
 divOpciones.addEventListener('click', (e) => {
     switch (e.target.outerText) {
         case 'Día':
-            opcionNueva = '';
-            temporalidad.innerHTML = '';
-            for (let i = 1; i < 32; i++) {
-                opcionNueva += `
-                <option class="op" value="${i}">
-                `
-            }
-            temporalidad.innerHTML += opcionNueva;
+            agregaDias();
             break;
         case 'Mes':
 
