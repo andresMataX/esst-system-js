@@ -2,10 +2,9 @@
 const url = 'http://127.0.0.1:5000/auth/login';
 
 // Referencias HTML
-const form = document.querySelector('form');
+const button = document.querySelector('#button');
 
 const login = async (usuario) => {
-    console.log(usuario);
     const resp = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(usuario),
@@ -13,9 +12,12 @@ const login = async (usuario) => {
             'Content-Type': 'application/json',
         }
     });
-    const data = await resp.json();
-    console.log(data);
-    return data;
+    const { error } = await resp.json();
+    if (error === 'false') {
+        window.location.href = "/crud/registro_cliente.html";
+    } else {
+        alert(error)
+    }
 }
 
 // Función para obtener los valores de los campos del formulario
@@ -28,3 +30,7 @@ const obtenerDatos = () => {
     }
     login(usuario);
 }
+
+button.addEventListener('click', () => {
+    obtenerDatos();
+});
