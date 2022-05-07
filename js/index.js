@@ -12,11 +12,12 @@ const login = async (usuario) => {
             'Content-Type': 'application/json',
         }
     });
-    const { error } = await resp.json();
-    if (error === 'false') {
+    const { error, estatus, retro } = await resp.json();
+    if (estatus === 'ok') {
         window.location.href = "/crud/registro_cliente.html";
+        alert(retro);
     } else {
-        alert(error)
+        alert(error);
     }
 }
 
