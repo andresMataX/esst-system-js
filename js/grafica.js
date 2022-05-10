@@ -1,3 +1,19 @@
+// url para obtener la tabla de transacciones
+const url = 'http://127.0.0.1:5000/read/transacciones';
+
+let ingresos = gastos = 0;
+
+const getIngresos = async () => {
+    const resp = await fetch(url);
+    const data = await resp.json()
+    console.log(data);
+}
+
+getIngresos();
+
+console.log(ingresos);
+console.log(gastos);
+
 const data = {
     labels: [
         'Costes',
@@ -5,7 +21,7 @@ const data = {
     ],
     datasets: [{
         label: 'My First Dataset',
-        data: [50, 1000],
+        data: [gastos, ingresos],
         backgroundColor: [
             'rgb(192, 57, 43)',
             'rgb(30, 132, 73)',
