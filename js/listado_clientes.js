@@ -15,12 +15,13 @@
         }
     }
 
-    const createRow = ({ id, name_cli, l_name_cli, cut_name }) => {
+    const createRow = ({ id, name_cli, l_name_cli, cut_name, date }) => {
         const html = `<tr>
                         <th>${id}</th>
                         <td>${name_cli}</td>
                         <td>${l_name_cli}</td>
                         <td>${cut_name}</td>
+                        <td>${date}</td>
                 </tr>`
         return html;
     }
