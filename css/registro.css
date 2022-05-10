@@ -12,11 +12,16 @@
 
 .cont-img {
     width: 466px;
+}
+
+.cont-img-coste {
+    width: 466px;
     display: block;
     margin-top: -100px;
 }
 
-.cont-img img {
+.cont-img img,
+.cont-img-coste img {
     width: 200px;
 }
 
