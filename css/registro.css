@@ -54,6 +54,13 @@ form h2 {
 }
 
 .col-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 70px 0px 70px;
+}
+
+.col-botones-coste {
     margin-top: 70px;
     display: flex;
     flex-direction: row;
