@@ -23,3 +23,18 @@ const createRow = ({ id, name_cli, l_name_cli, cut_name }) => {
 }
 
 getClientes();
+
+const filterClientes = async (date) => {
+    const resp = await fetch(urlClientes, {
+        method: 'POST',
+        body: JSON.stringify(date),
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    });
+    const { filtro } = await resp.json();
+    console.log(filtro);
+    // alertify.set('notifier', 'position', 'top-center');
+}
+
+filterClientes({ date: '2022' });
