@@ -13,11 +13,14 @@ const register = async (cliente) => {
         }
     });
     const { error, estatus, retro } = await resp.json();
+    alertify.set('notifier', 'position', 'top-center');
     if (estatus === 'ok') {
-        window.location.href = "/crud/registro_cliente.html";
-        alert(retro);
+        alertify.success(retro);
+        setTimeout(() => {
+            window.location.href = "/crud/registro_cliente.html";
+        }, 1500);
     } else {
-        alert(error);
+        alertify.error(error);
     }
 }
 
@@ -25,13 +28,13 @@ const register = async (cliente) => {
 const obtenerDatos = () => {
     const { value: nombre } = document.querySelector('#nombre');
     const { value: apellido } = document.querySelector('#apellido');
-    const value = document.querySelector('#corte');
-    console.log(value.value);
+    const { index } = document.querySelector('.opcion');
     const cliente = {
-        user: nombre,
-        pass: apellido
+        name_cli: nombre,
+        l_name_cli: apellido,
+        id_cut_type: index + 1
     }
-    // register(cliente);
+    register(cliente);
 }
 
 aceptar.addEventListener('click', () => {
