@@ -5,6 +5,9 @@
     const urlClientes = 'http://127.0.0.1:5000/create/venta';
     const urlCortes = 'http://127.0.0.1:5000/read/cortes';
 
+    // ID del Nombre del tipo de corte seleccionado
+    let idCut = 0;
+
     // Referencias HTML
     const aceptar = document.querySelector('#aceptar');
     const datalistCorte = document.querySelector('#cortes');
@@ -56,14 +59,12 @@
     const obtenerDatos = () => {
         const { value: nombre } = document.querySelector('#nombre');
         const { value: apellido } = document.querySelector('#apellido');
-        const data = document.querySelectorAll('.opcion');
         const cliente = {
             name_cli: nombre,
             l_name_cli: apellido,
-            id_cut_type: data
+            id_cut_type: idCut
         }
-        console.log(cliente);
-        // register(cliente);
+        register(cliente);
     }
 
     aceptar.addEventListener('click', () => {
@@ -71,6 +72,8 @@
     });
 
     inputCorte.addEventListener('change', (e) => {
-        getCorteID(e.target.value).then(console.log)
+        getCorteID(e.target.value).then((id) => {
+            idCut = id;
+        })
     });
 })();
