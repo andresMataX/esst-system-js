@@ -47,26 +47,10 @@ const filterCosteName = async (date) => {
 
 button.addEventListener('click', () => {
     const filtro = {
-        date: '',
-        day: '',
-        month: '',
-        year: ''
+        name_cost: ''
     }
-    switch (inputProducto.name) {
-        case 'fecha':
-            filtro.date = inputProducto.value;
-            break;
-        case 'fecha_d':
-            filtro.day = inputProducto.value;
-            break;
-        case 'fecha_m':
-            filtro.month = (inputProducto.value) < 10 ? '0' + inputProducto.value : inputProducto.value;
-            break;
-        case 'fecha_a':
-            filtro.year = inputProducto.value;
-            break;
-    }
-    if (filtro.day === '' && filtro.month === '' && filtro.year === '' && filtro.date === '') {
+    filtro.name_cost = inputProducto.value;
+    if (filtro.name_cost === '') {
         alertify.set('notifier', 'position', 'top-center');
         alertify.error('Debes llenar el campo con información.')
     } else {
