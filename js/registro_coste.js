@@ -48,7 +48,7 @@
         if (estatus === 'ok') {
             alertify.success(retro);
             setTimeout(() => {
-                window.location.href = "/crud/registro_cliente.html";
+                window.location.href = "/crud/registro_coste.html";
             }, 1500);
         } else {
             alertify.error(error);
@@ -59,11 +59,10 @@
     const obtenerDatos = () => {
         const { value: nombre } = document.querySelector('#nombre');
         const producto = {
-            name_cli: nombre,
-            id_pro_type: idProduct,
+            name_cost: nombre,
+            id_pro_type: idProduct
         }
-        console.log(producto);
-        // register(producto);
+        register(producto);
     }
 
     aceptar.addEventListener('click', () => {
@@ -71,8 +70,8 @@
     });
 
     inputCoste.addEventListener('change', (e) => {
-        // getProductoID(e.target.value).then((id) => {
-        //     idProduct = id;
-        // });
+        getProductoID(e.target.value).then((id) => {
+            idProduct = id;
+        });
     });
 })();
