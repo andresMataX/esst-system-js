@@ -34,12 +34,15 @@ const filterClientes = async (date) => {
             'Content-Type': 'application/json',
         }
     });
-    const { filtro: clientes } = await resp.json();
     tbody.innerHTML = '';
+    const { filtro: clientes } = await resp.json();
+    alertify.set('notifier', 'position', 'top-center');
+    if (clientes.length === 0) {
+        alertify.warning('No se han encontrado registros con ese filtro.');
+    }
     for (const cliente of clientes) {
         tbody.innerHTML += createRow(cliente);
     }
-    // alertify.set('notifier', 'position', 'top-center');
 }
 
 button.addEventListener('click', () => {

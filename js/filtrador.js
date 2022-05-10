@@ -41,7 +41,6 @@ const convertirInputText = () => {
 divOpciones.addEventListener('click', (e) => {
     switch (e.target.outerText) {
         case 'Fecha':
-            console.log(fecha);
             convertirInputText();
             break;
         case 'Día':
