@@ -15,12 +15,13 @@
         }
     }
 
-    const createRow = ({ id, name_cost, prod_price, prod_name }) => {
+    const createRow = ({ id, name_cost, prod_price, prod_name, date }) => {
         const html = `<tr>
                         <th>${id}</th>
                         <td>${name_cost}</td>
                         <td>${prod_name}</td>
                         <td>${prod_price}</td>
+                        <td>${date}</td>
                 </tr>`
         return html;
     }
