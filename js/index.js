@@ -13,11 +13,14 @@ const login = async (usuario) => {
         }
     });
     const { error, estatus, retro } = await resp.json();
+    alertify.set('notifier', 'position', 'top-center');
     if (estatus === 'ok') {
-        window.location.href = "/crud/registro_cliente.html";
-        alert(retro);
+        alertify.success(retro);
+        setTimeout(() => {
+            window.location.href = "/crud/registro_cliente.html";
+        }, 1500);
     } else {
-        alert(error);
+        alertify.error(error);
     }
 }
 
