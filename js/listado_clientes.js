@@ -3,6 +3,8 @@ const urlClientes = 'http://127.0.0.1:5000/read/clientes';
 
 // Referencias HTML
 const tbody = document.querySelector('tbody');
+const inputFiltro = document.querySelector('#filtro_fecha');
+const button = document.querySelector('.button');
 
 const getClientes = async () => {
     const resp = await fetch(urlClientes);
@@ -32,9 +34,13 @@ const filterClientes = async (date) => {
             'Content-Type': 'application/json',
         }
     });
-    const { filtro } = await resp.json();
-    console.log(filtro);
+    const { filtro: clientes } = await resp.json();
+    for (const cliente of clientes) {
+        tbody.innerHTML += createRow(cliente);
+    }
     // alertify.set('notifier', 'position', 'top-center');
 }
 
-filterClientes({ date: '2022' });
+button.addEventListener('click', () => {
+    filterClientes({ date: inputFiltro.value });
+});
