@@ -5,42 +5,51 @@ let ingresos = gastos = 0;
 
 const getIngresos = async () => {
     const resp = await fetch(url);
-    const data = await resp.json()
-    console.log(data);
+    const { transacciones } = await resp.json()
+    for (const transaccion of transacciones) {
+        console.log(transaccion.tran_type);
+        if (transaccion.tran_type == 0) {
+            ingresos += transaccion.tran_price;
+        } else {
+            gastos += transaccion.tran_price;
+        }
+    }
+    console.log('Ingresos', ingresos);
+    console.log('Gastos', gastos);
+    renderGrafica();
 }
 
 getIngresos();
 
-console.log(ingresos);
-console.log(gastos);
-
-const data = {
-    labels: [
-        'Costes',
-        'Ingresos'
-    ],
-    datasets: [{
-        label: 'My First Dataset',
-        data: [gastos, ingresos],
-        backgroundColor: [
-            'rgb(192, 57, 43)',
-            'rgb(30, 132, 73)',
+const renderGrafica = () => {
+    const data = {
+        labels: [
+            'Costes',
+            'Ingresos'
         ],
-        hoverOffset: 4
-    }]
-};
+        datasets: [{
+            label: 'Balance del local',
+            data: [gastos, ingresos],
+            backgroundColor: [
+                'rgb(192, 57, 43)',
+                'rgb(30, 132, 73)'
+            ],
+            hoverOffset: 4
+        }]
+    };
 
-const config = {
-    type: 'pie',
-    data: data,
-    options: {
-        layout: {
-            autoPadding: false
+    const config = {
+        type: 'pie',
+        data: data,
+        options: {
+            layout: {
+                autoPadding: false
+            }
         }
-    }
-};
+    };
 
-const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-);
+    const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+    );
+}
