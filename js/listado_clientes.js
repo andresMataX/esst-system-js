@@ -35,6 +35,7 @@ const filterClientes = async (date) => {
         }
     });
     const { filtro: clientes } = await resp.json();
+    tbody.innerHTML = '';
     for (const cliente of clientes) {
         tbody.innerHTML += createRow(cliente);
     }
