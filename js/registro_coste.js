@@ -1,44 +1,44 @@
 (() => {
     'use strict'
 
-    // Ruta para hacer el registro del cliente
-    const urlClientes = 'http://127.0.0.1:5000/create/venta';
-    const urlCortes = 'http://127.0.0.1:5000/read/cortes';
+    // Ruta para hacer el registro del coste
+    const urlCostes = 'http://127.0.0.1:5000/create/coste';
+    const urlProductos = 'http://127.0.0.1:5000/read/productos';
 
     // ID del Nombre del tipo de corte seleccionado
-    let idCut = 0;
+    let idProduct = 0;
 
     // Referencias HTML
     const aceptar = document.querySelector('#aceptar');
-    const datalistCorte = document.querySelector('#cortes');
-    const inputCorte = document.querySelector('#corte');
+    const datalistProductos = document.querySelector('#productos');
+    const inputCoste = document.querySelector('#coste');
 
     // Función para obtener los tipos de corte y agregarlos al datalist
-    const getCortes = async () => {
-        const resp = await fetch(urlCortes);
-        const { cortes } = await resp.json();
+    const getProductos = async () => {
+        const resp = await fetch(urlProductos);
+        const { producto } = await resp.json();
         // Obtención de todos los nombres de los tipos de cortes
         let opcion = '';
-        for (const { cut_name } of cortes) {
-            opcion += `<option value="${cut_name}" class="opcion">`;
+        for (const { prod_name } of producto) {
+            opcion += `<option value="${prod_name}" class="opcion">`;
         }
-        datalistCorte.innerHTML += opcion;
+        datalistProductos.innerHTML += opcion;
     }
 
-    const getCorteID = async (cutName) => {
-        const resp = await fetch(urlCortes);
-        const { cortes } = await resp.json();
-        for (const corte of cortes) {
-            if (corte.cut_name === cutName) return corte.id
+    const getProductoID = async (productName) => {
+        const resp = await fetch(urlProductos);
+        const { producto } = await resp.json();
+        for (const product of producto) {
+            if (product.prod_name === productName) return product.id
         }
     }
 
-    getCortes();
+    getProductos();
 
-    const register = async (cliente) => {
-        const resp = await fetch(urlClientes, {
+    const register = async (coste) => {
+        const resp = await fetch(urlCostes, {
             method: 'POST',
-            body: JSON.stringify(cliente),
+            body: JSON.stringify(coste),
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -58,22 +58,21 @@
     // Función para obtener los valores de los campos del formulario
     const obtenerDatos = () => {
         const { value: nombre } = document.querySelector('#nombre');
-        const { value: apellido } = document.querySelector('#apellido');
-        const cliente = {
+        const producto = {
             name_cli: nombre,
-            l_name_cli: apellido,
-            id_cut_type: idCut
+            id_pro_type: idProduct,
         }
-        register(cliente);
+        console.log(producto);
+        // register(producto);
     }
 
     aceptar.addEventListener('click', () => {
         obtenerDatos();
     });
 
-    inputCorte.addEventListener('change', (e) => {
-        getCorteID(e.target.value).then((id) => {
-            idCut = id;
-        })
+    inputCoste.addEventListener('change', (e) => {
+        // getProductoID(e.target.value).then((id) => {
+        //     idProduct = id;
+        // });
     });
 })();
