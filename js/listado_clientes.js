@@ -46,5 +46,30 @@ const filterClientes = async (date) => {
 }
 
 button.addEventListener('click', () => {
-    filterClientes({ date: inputFiltro.value });
+    const filtro = {
+        date: '',
+        day: '',
+        month: '',
+        year: ''
+    }
+    switch (inputFiltro.name) {
+        case 'fecha':
+            filtro.date = inputFiltro.value;
+            break;
+        case 'fecha_d':
+            filtro.day = inputFiltro.value;
+            break;
+        case 'fecha_m':
+            filtro.month = (inputFiltro.value) < 10 ? '0' + inputFiltro.value : inputFiltro.value;
+            break;
+        case 'fecha_a':
+            filtro.year = inputFiltro.value;
+            break;
+    }
+    if (filtro.day === '' && filtro.month === '' && filtro.year === '' && filtro.date === '') {
+        alertify.set('notifier', 'position', 'top-center');
+        alertify.error('Debes llenar el campo con información.')
+    } else {
+        filterClientes(filtro);
+    }
 });
