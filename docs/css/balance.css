@@ -1,0 +1,38 @@
+.cabecera-listado {
+    display: flex;
+    justify-content: space-between;
+}
+
+.div-panel {
+    padding: 30px;
+}
+
+.opciones {
+    display: flex;
+}
+
+.opciones div {
+    border: 3px solid black;
+    display: block;
+    width: 110px;
+    text-align: center;
+}
+
+.opciones h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.div-panel a {
+    text-decoration: none;
+    display: block;
+    color: black;
+}
+
+.grafica {
+    display: block;
+    margin: auto;
+    width: 450px !important;
+    height: 450px !important;
+}
