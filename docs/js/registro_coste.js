@@ -48,7 +48,7 @@
         if (estatus === 'ok') {
             alertify.success(retro);
             setTimeout(() => {
-                window.location.href = "../crud/registro_coste.html";
+                window.location.href = "registro_coste.html";
             }, 1500);
         } else {
             alertify.error(error);
