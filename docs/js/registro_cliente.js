@@ -2,8 +2,8 @@
     'use strict'
 
     // Ruta para hacer el registro del cliente
-    const urlClientes = 'http://127.0.0.1:5000/create/venta';
-    const urlCortes = 'http://127.0.0.1:5000/read/cortes';
+    const urlClientes = 'https://morning-scrubland-07944.herokuapp.com/create/venta';
+    const urlCortes = 'https://morning-scrubland-07944.herokuapp.com/read/cortes';
 
     // ID del Nombre del tipo de corte seleccionado
     let idCut = 0;
