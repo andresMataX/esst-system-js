@@ -1,0 +1,78 @@
+.col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.fila {
+    margin: 0px 70px 0px 70px;
+    text-align: center;
+}
+
+.cont-img {
+    width: 466px;
+}
+
+.cont-img-coste {
+    width: 466px;
+    display: block;
+    margin-top: -100px;
+}
+
+.cont-img img,
+.cont-img-coste img {
+    width: 200px;
+}
+
+.button {
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 250px;
+}
+
+form input[type="text"],
+#corte,
+#coste {
+    border: 3px solid black;
+    border-radius: 15px;
+    display: block;
+    font-size: 25px;
+    margin: -25px 0px 0px 0px;
+    padding: 5px;
+    text-align: center;
+    width: 450px;
+}
+
+form h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.col-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 70px 0px 70px;
+}
+
+.col-botones-coste {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 70px 0px 70px;
+}
+
+.col-botones p {
+    height: 50px;
+}
