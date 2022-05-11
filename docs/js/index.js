@@ -18,7 +18,7 @@
         if (estatus === 'ok') {
             alertify.success(retro);
             setTimeout(() => {
-                window.location.href = "crud/registro_cliente.html";
+                window.location.href = "../crud/registro_cliente.html";
             }, 1500);
         } else {
             alertify.error(error);
