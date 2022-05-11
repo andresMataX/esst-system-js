@@ -1,6 +1,6 @@
 (() => {
     // url para obtener la tabla de transacciones
-    const url = 'http://127.0.0.1:5000/read/transacciones';
+    const url = 'https://morning-scrubland-07944.herokuapp.com/read/transacciones';
 
     let ingresos = gastos = 0;
 

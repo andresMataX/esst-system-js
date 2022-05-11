@@ -1,6 +1,6 @@
 (() => {
     // URL de clientes
-    const urlCostes = 'http://127.0.0.1:5000/read/costes';
+    const urlCostes = 'https://morning-scrubland-07944.herokuapp.com/read/costes';
 
     // Referencias HTML
     const tbody = document.querySelector('tbody');

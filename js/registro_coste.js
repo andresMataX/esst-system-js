@@ -2,8 +2,8 @@
     'use strict'
 
     // Ruta para hacer el registro del coste
-    const urlCostes = 'http://127.0.0.1:5000/create/coste';
-    const urlProductos = 'http://127.0.0.1:5000/read/productos';
+    const urlCostes = 'https://morning-scrubland-07944.herokuapp.com/create/coste';
+    const urlProductos = 'https://morning-scrubland-07944.herokuapp.com/read/productos';
 
     // ID del Nombre del tipo de corte seleccionado
     let idProduct = 0;
