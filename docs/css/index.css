@@ -22,7 +22,6 @@ body {
 }
 
 .div-logo img {
-    border: 1px solid black;
     width: 32rem;
 }
 
@@ -36,10 +35,6 @@ body {
     justify-content: center;
 }
 
-.title {
-    border: 1px solid black;
-}
-
 .title h1 {
     text-align: center;
     font-size: 55px;
@@ -48,10 +43,6 @@ body {
 .div-form h1 span {
     font-weight: 500;
     font-size: 55px;
-}
-
-.form {
-    border: 1px solid black;
 }
 
 .form h2 {
@@ -161,15 +152,43 @@ body {
 
     .div-logo,
     .div-form {
-        border: 1px solid black;
-        width: 100%;
+        width: auto;
+        border: none;
     }
 
     .div-logo {
-        height: 25vh;
+        height: auto;
+        margin-top: 15px;
     }
 
     .div-logo img {
         width: 10rem;
+    }
+
+    .div-form {
+        justify-content: flex-start;
+        height: auto;
+    }
+
+    .title h1,
+    .title h1 span {
+        font-size: 50px;
+    }
+
+    .form {
+        display: block;
+        margin-top: -35px;
+    }
+
+    .form h2 {
+        font-size: 30px;
+    }
+
+    .form input[type="text"],
+    .form input[type="password"] {
+        border-radius: 15px;
+        font-size: 25px;
+        height: 30px;
+        width: 350px;
     }
 }
