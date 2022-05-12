@@ -3,6 +3,8 @@
 body {
     font-family: 'Poppins';
     margin: 0px;
+    padding: 0px;
+    overflow: hidden;
 }
 
 .container {
@@ -11,15 +13,25 @@ body {
 }
 
 .div-logo {
+    display: flex;
     border: 3px solid black;
     width: 50%;
-    padding: 70px;
-    height: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-logo img {
+    border: 1px solid black;
+    width: 512px;
+    height: 512px;
 }
 
 .div-form {
     border: 3px solid black;
-    padding: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
     width: 50%;
 }
 
