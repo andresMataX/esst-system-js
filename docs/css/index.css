@@ -23,8 +23,7 @@ body {
 
 .div-logo img {
     border: 1px solid black;
-    width: 512px;
-    height: 512px;
+    width: 32rem;
 }
 
 .div-form {
@@ -90,4 +89,9 @@ body {
     width: 250px;
 }
 
-@media (max-width:1040px) {}
+@media (max-width:1040px) {
+    .div-logo img {
+        width: 70%;
+        height: 70%;
+    }
+}
