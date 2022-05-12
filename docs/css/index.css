@@ -33,9 +33,15 @@ body {
     flex-flow: column nowrap;
     height: 100vh;
     width: 50%;
+    align-items: center;
+    justify-content: center;
 }
 
-.div-form h1 {
+.title {
+    border: 1px solid black;
+}
+
+.title h1 {
     text-align: center;
     font-size: 55px;
     margin-bottom: 75px;
@@ -44,6 +50,10 @@ body {
 .div-form h1 span {
     font-weight: 500;
     font-size: 55px;
+}
+
+#form {
+    border: 1px solid black;
 }
 
 #form h2 {
