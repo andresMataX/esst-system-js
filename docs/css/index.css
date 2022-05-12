@@ -4,18 +4,18 @@ body {
     font-family: 'Poppins';
     margin: 0px;
     padding: 0px;
-    overflow: hidden;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .div-logo {
     display: flex;
-    border: 3px solid black;
     width: 50%;
+    border-right: 3px solid black;
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -28,7 +28,7 @@ body {
 }
 
 .div-form {
-    border: 3px solid black;
+    border-left: 3px solid black;
     display: flex;
     flex-flow: column nowrap;
     height: 100vh;
@@ -44,7 +44,6 @@ body {
 .title h1 {
     text-align: center;
     font-size: 55px;
-    margin-bottom: 75px;
 }
 
 .div-form h1 span {
@@ -90,3 +89,5 @@ body {
     text-align: center;
     width: 250px;
 }
+
+@media (max-width:1040px) {}
