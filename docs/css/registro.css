@@ -241,7 +241,7 @@ form h2 {
         justify-content: center;
         margin: 15px;
         width: auto;
-        height: 100vh;
+        padding: 15px;
     }
 
     form {
