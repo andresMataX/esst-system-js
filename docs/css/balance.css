@@ -36,3 +36,38 @@
     width: 450px !important;
     height: 450px !important;
 }
+
+@media (max-width: 768px) {
+
+    .grafica {
+        width: 350px !important;
+        height: 350px !important;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .cabecera-listado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .filtrador {
+        order: 1;
+    }
+
+    .titulo {
+        order: 2;
+    }
+
+    .div-panel {
+        height: 90%;
+    }
+
+    .grafica {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}
