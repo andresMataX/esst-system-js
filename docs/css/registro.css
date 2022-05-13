@@ -136,15 +136,71 @@ form h2 {
 
     form input[type="text"],
     #corte,
-    #coste,
-    .cont-img,
-    .cont-img-coste {
+    #coste {
         height: 20px;
-        font-size: 20px;
+        font-size: 18px;
         width: 250px;
     }
 
     form h2 {
         font-size: 25px;
+    }
+
+    .fila .cont-img {
+        width: 266px;
+    }
+
+    .fila .cont-img img {
+        height: 10rem;
+    }
+
+    .button {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 830px) {
+    .col {
+        flex-direction: column;
+    }
+
+    form input[type="text"],
+    #corte,
+    #coste {
+        height: 20px;
+        font-size: 18px;
+        width: 400px;
+    }
+
+    .fila .cont-img {
+        margin-top: 10px;
+    }
+
+    .fila .cont-img img {
+        height: 7rem;
+    }
+
+    .button {
+        width: 200px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 710px) {
+
+    form input[type="text"],
+    #corte,
+    #coste {
+        height: 20px;
+        font-size: 18px;
+        width: 300px;
+    }
+
+    .col {
+        padding: 0px;
+    }
+
+    .button {
+        width: 150px;
     }
 }
