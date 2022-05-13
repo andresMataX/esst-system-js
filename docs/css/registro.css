@@ -61,7 +61,7 @@ form h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 70px 0px 70px;
+    margin: 0px 70px;
 }
 
 .col-botones-coste {
@@ -80,17 +80,31 @@ form h2 {
 
     form input[type="text"],
     #corte,
-    #coste {
-        border-radius: 15px;
-        display: block;
-        font-size: 25px;
-        margin: -25px 0px 0px 0px;
-        padding: 5px;
-        width: 400px;
-    }
-
+    #coste,
     .cont-img,
     .cont-img-coste {
         width: 400px;
+    }
+}
+
+@media (max-width: 1130px) {
+
+    form input[type="text"],
+    #corte,
+    #coste,
+    .cont-img,
+    .cont-img-coste {
+        width: 350px;
+    }
+}
+
+@media (max-width: 1030px) {
+
+    form input[type="text"],
+    #corte,
+    #coste,
+    .cont-img,
+    .cont-img-coste {
+        width: 300px;
     }
 }
