@@ -151,3 +151,26 @@ p {
         width: 120px;
     }
 }
+
+@media (max-width: 426px) {
+
+    .div-panel {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .cabecera-listado {
+        display: flex;
+        border: 1px solid black;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .filtrador {
+        order: 2;
+    }
+
+    .titulo {
+        order: 1;
+    }
+}
