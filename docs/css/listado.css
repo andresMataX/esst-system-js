@@ -161,7 +161,6 @@ p {
 
     .cabecera-listado {
         display: flex;
-        border: 1px solid black;
         flex-direction: column;
         width: 100%;
     }
