@@ -278,6 +278,7 @@ form h2 {
         justify-content: center;
         width: 100%;
         margin: 0;
+        border: none;
     }
 
     .button {
