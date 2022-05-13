@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin-top: 50px;
     padding: 0px 70px;
     border: 1px solid black;
@@ -9,19 +10,17 @@
 
 .fila {
     text-align: center;
-}
-
-.cont-img,
-.cont-img-coste {
-    width: 466px;
+    border: 1px solid black;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 }
 
-.cont-img img,
-.cont-img-coste img {
-    width: 200px;
+.fila .cont-img {
+    width: 466px;
+}
+
+.fila .cont-img img {
+    height: 12.5rem;
 }
 
 .button {
@@ -46,7 +45,6 @@ form input[type="text"],
     border-radius: 15px;
     display: block;
     font-size: 25px;
-    margin: -25px 0px 0px 0px;
     padding: 5px;
     text-align: center;
     width: 450px;
@@ -55,6 +53,8 @@ form input[type="text"],
 form h2 {
     font-size: 30px;
     font-weight: 500;
+    display: block;
+    margin-bottom: -5px;
 }
 
 .col-botones {
@@ -106,5 +106,26 @@ form h2 {
     .cont-img,
     .cont-img-coste {
         width: 300px;
+    }
+}
+
+@media (max-width: 930px) {
+
+    form input[type="text"],
+    #corte,
+    #coste,
+    .cont-img,
+    .cont-img-coste {
+        height: 20px;
+        font-size: 20px;
+        width: 250px;
+    }
+
+    form h2 {
+        font-size: 25px;
+    }
+
+    .cont-img img {
+        width: 5rem;
     }
 }
