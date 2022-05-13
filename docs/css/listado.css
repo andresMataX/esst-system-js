@@ -167,14 +167,28 @@ p {
     .cabecera-listado {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
     }
 
+    .opciones h2 {
+        width: auto;
+    }
+
     .filtrador {
-        order: 2;
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .titulo {
-        order: 1;
+        order: 2;
+    }
+
+    th {
+        font-size: 15px;
     }
 }
