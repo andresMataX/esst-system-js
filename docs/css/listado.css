@@ -103,10 +103,51 @@ p {
     .titulo {
         display: flex;
         justify-content: center;
-        margin-right: 0px;
+        margin-right: 50px;
     }
 
     .titulo h1 {
         font-size: 30px;
+    }
+
+    .opciones h2 {
+        font-size: 23px;
+        width: 100px;
+    }
+
+    #filtro_fecha,
+    input[type="text"] {
+        font-size: 20px;
+        margin-right: 10px;
+        padding: 5px;
+        width: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    .div-panel {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .titulo {
+        margin-right: 10px;
+    }
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .opciones h2 {
+        font-size: 20px;
+        width: 75px;
+    }
+
+    #filtro_fecha,
+    input[type="text"] {
+        font-size: 20px;
+        margin-right: 10px;
+        padding: 5px;
+        width: 120px;
     }
 }
