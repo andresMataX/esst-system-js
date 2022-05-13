@@ -157,6 +157,11 @@ p {
     .div-panel {
         margin: 10px;
         padding: 10px;
+        height: 90%;
+    }
+
+    table {
+        height: 80%;
     }
 
     .cabecera-listado {
