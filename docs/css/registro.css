@@ -80,10 +80,25 @@ form h2 {
 
     form input[type="text"],
     #corte,
-    #coste,
-    .cont-img,
-    .cont-img-coste {
+    #coste {
+        width: 416px;
+    }
+
+    .fila .cont-img {
+        width: 432px;
+    }
+}
+
+@media (max-width: 1160px) {
+
+    form input[type="text"],
+    #corte,
+    #coste {
         width: 400px;
+    }
+
+    .fila .cont-img {
+        width: 418px;
     }
 }
 
@@ -96,6 +111,10 @@ form h2 {
     .cont-img-coste {
         width: 350px;
     }
+
+    .fila .cont-img {
+        width: 366px;
+    }
 }
 
 @media (max-width: 1030px) {
@@ -106,6 +125,10 @@ form h2 {
     .cont-img,
     .cont-img-coste {
         width: 300px;
+    }
+
+    .fila .cont-img {
+        width: 316px;
     }
 }
 
@@ -123,9 +146,5 @@ form h2 {
 
     form h2 {
         font-size: 25px;
-    }
-
-    .cont-img img {
-        width: 5rem;
     }
 }
