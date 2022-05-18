@@ -9,34 +9,28 @@ body {
 .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    height: 100vh;
 }
 
 .div-logo {
-    display: flex;
-    width: 50%;
-    border-right: 3px solid black;
-    height: 100vh;
     align-items: center;
+    border-right: 3px solid black;
+    display: flex;
+    flex: 1;
     justify-content: center;
 }
 
-.div-logo img {
-    width: 32rem;
-}
-
 .div-form {
+    align-items: center;
     border-left: 3px solid black;
     display: flex;
-    flex-flow: column nowrap;
-    height: 100vh;
-    width: 50%;
-    align-items: center;
+    flex: 1;
+    flex-direction: column;
     justify-content: center;
 }
 
 .title h1 {
-    text-align: center;
     font-size: 55px;
 }
 
@@ -58,7 +52,6 @@ body {
     display: block;
     font-size: 25px;
     height: 40px;
-    margin: -20px auto 15px auto;
     padding: 5px;
     text-align: center;
     width: 400px;
@@ -74,121 +67,8 @@ body {
     font-size: 35px;
     font-weight: bold;
     font-style: italic;
-    margin: 15px auto 0px auto;
+    margin: 35px auto 0px auto;
     text-align: center;
     padding: 7px;
     width: 250px;
-}
-
-@media (max-width: 1024px) {
-    .div-logo img {
-        width: 25rem;
-    }
-}
-
-@media (max-width: 880px) {
-
-    .title h1,
-    .title h1 span {
-        font-size: 40px;
-    }
-
-    .form input[type="text"],
-    .form input[type="password"] {
-        border-radius: 15px;
-        font-size: 20px;
-        height: 30px;
-        width: 300px;
-    }
-
-    .form h2 {
-        font-size: 25px;
-    }
-
-    #button {
-        width: 175px;
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 810px) {
-    .div-logo img {
-        width: 20rem;
-    }
-}
-
-@media (max-width: 650px) {
-    .div-logo img {
-        width: 17rem;
-    }
-
-    .title h1,
-    .title h1 span {
-        font-size: 30px;
-    }
-
-    .form input[type="text"],
-    .form input[type="password"] {
-        border-radius: 13px;
-        font-size: 15px;
-        height: 25px;
-        width: 200px;
-    }
-
-    .form h2 {
-        font-size: 20px;
-    }
-
-    #button {
-        font-size: 22px;
-        width: 160px;
-    }
-}
-
-@media (max-width: 542px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .div-logo,
-    .div-form {
-        width: auto;
-        border: none;
-    }
-
-    .div-logo {
-        height: auto;
-        margin-top: 15px;
-    }
-
-    .div-logo img {
-        width: 10rem;
-    }
-
-    .div-form {
-        justify-content: flex-start;
-        height: auto;
-    }
-
-    .title h1,
-    .title h1 span {
-        font-size: 50px;
-    }
-
-    .form {
-        display: block;
-        margin-top: -35px;
-    }
-
-    .form h2 {
-        font-size: 30px;
-    }
-
-    .form input[type="text"],
-    .form input[type="password"] {
-        border-radius: 15px;
-        font-size: 25px;
-        height: 30px;
-        width: 350px;
-    }
 }
