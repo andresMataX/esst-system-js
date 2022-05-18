@@ -72,3 +72,48 @@ body {
     padding: 7px;
     width: 250px;
 }
+
+@media (max-width: 920px) {
+
+    .container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .div-logo,
+    .div-form {
+        border: none;
+    }
+
+    .div-logo {
+        flex-grow: 0;
+        padding: 25px;
+    }
+
+    .div-logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .title h1 {
+        margin: 0;
+    }
+
+    .div-form {
+        justify-content: start;
+    }
+
+    .form input[type="text"],
+    .form input[type="password"] {
+        font-size: 20px;
+        height: 35px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    #button {
+        font-size: 33px;
+        padding: 7px;
+        width: 250px;
+    }
+}
