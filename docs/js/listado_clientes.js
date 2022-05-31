@@ -1,6 +1,6 @@
 (() => {
     // URL de clientes
-    const urlClientes = 'https://morning-scrubland-07944.herokuapp.com/read/clientes';
+    const urlClientes = 'https://esst-system-flask.herokuapp.com/read/clientes';
 
     // Referencias HTML
     const tbody = document.querySelector('tbody');

@@ -2,8 +2,8 @@
     'use strict'
 
     // Ruta para hacer el registro del cliente
-    const urlClientes = 'https://morning-scrubland-07944.herokuapp.com/create/venta';
-    const urlCortes = 'https://morning-scrubland-07944.herokuapp.com/read/cortes';
+    const urlClientes = 'https://esst-system-flask.herokuapp.com/create/venta';
+    const urlCortes = 'https://esst-system-flask.herokuapp.com/read/cortes';
 
     // ID del Nombre del tipo de corte seleccionado
     let idCut = 0;
