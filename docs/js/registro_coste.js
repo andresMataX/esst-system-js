@@ -2,8 +2,8 @@
     'use strict'
 
     // Ruta para hacer el registro del coste
-    const urlCostes = 'https://morning-scrubland-07944.herokuapp.com/create/coste';
-    const urlProductos = 'https://morning-scrubland-07944.herokuapp.com/read/productos';
+    const urlCostes = 'https://esst-system-flask.herokuapp.com/create/coste';
+    const urlProductos = 'https://esst-system-flask.herokuapp.com/read/productos';
 
     // ID del Nombre del tipo de corte seleccionado
     let idProduct = 0;
