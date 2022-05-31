@@ -1,6 +1,6 @@
 (() => {
     // Ruta para hacer el inicio de sesión
-    const url = 'https://morning-scrubland-07944.herokuapp.com/auth/login';
+    const url = 'https://esst-system-flask.herokuapp.com/auth/login';
 
     // Referencias HTML
     const button = document.querySelector('#button');
