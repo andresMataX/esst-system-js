@@ -12,19 +12,19 @@ Un sistema personalizado de administración de citas diarias de una estética, e
 ![image](https://user-images.githubusercontent.com/89869980/171056297-d2d30c47-c80a-45bd-a99f-f451b4ddae65.png)
 
 ### Registro de Cliente
-![image](https://user-images.githubusercontent.com/89869980/171056328-25a174a5-2127-41ff-9427-4d3950bf7912.png)
+![image](https://user-images.githubusercontent.com/89869980/171483743-5af36b4e-6880-43b5-bad7-8a7e152e8883.png)
 
 ### Listado de Clientes
-![image](https://user-images.githubusercontent.com/89869980/171056336-717650b4-c289-4400-8eee-acbc6b669f69.png)
+![image](https://user-images.githubusercontent.com/89869980/171483791-53b22d57-b8ec-4de7-955b-3b8ef138484a.png)
 
 ### Menú Finanzas del Local
-![image](https://user-images.githubusercontent.com/89869980/171056354-9866334a-b73f-4e9a-845b-b0b3e2f23a04.png)
+![image](https://user-images.githubusercontent.com/89869980/171483945-34124931-609e-4967-8c93-91cfcea3686e.png)
 
 ### Balance General
-![image](https://user-images.githubusercontent.com/89869980/171056371-180e87c8-c1ba-48b0-8ac0-c08c5393f2ca.png)
+![image](https://user-images.githubusercontent.com/89869980/171483978-c1633b4b-1857-4cfa-8656-1e02144e5f1a.png)
 
 ### Listado de Costes
-![image](https://user-images.githubusercontent.com/89869980/171056398-a70b02df-5eee-4179-930c-3f25fdfa75a6.png)
+![image](https://user-images.githubusercontent.com/89869980/171484003-da19a49f-2c0b-4340-b0d6-44a7c9e76548.png)
 
 ### Registro de Producto
-![image](https://user-images.githubusercontent.com/89869980/171056454-28ec44dd-e98e-41e2-b01d-ea6ba7766a55.png)
+![image](https://user-images.githubusercontent.com/89869980/171484031-10a5af1b-4f68-4cb9-8983-a724ea30e982.png)
