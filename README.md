@@ -1,5 +1,8 @@
 #### _Materia_: Administración de Proyectos de Software | 6to Semestre
 # esst-system-js
+### Usuario de prueba
+Usuario: andre <br>
+Contraseña: qwe
 
 ## Objetivo
 Gestionar las citas diarias de una estética de belleza. Generar reportes diarios de la cantidad y tipo de corte realizados por la estilista y tener un control contable.
